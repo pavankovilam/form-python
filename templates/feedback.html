@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Star rating using pure CSS</title>
+</head>
+
+<body>
+    <style>
+    td , th {
+        padding: 15px;
+        text-align: center;
+    }
+    .fade-in-right {
+  opacity: 0;
+  animation: fade-in-right 0.5s ease-in-out forwards;
+}
+
+@keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-button {
+  position: relative;
+  padding: 10px 20px;
+  background-color: #eaeaea;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.slide-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f81515;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.slide-button:hover {
+  transform: translateX(10px);
+}
+
+.slide-button:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+
+    </style>
+<center>
+  <form method="POST">
+    <label for="regno" title="text">Roll Number:-</label>
+    <input type="text" name="regno" required>
+    
+    <table  class="fade-in-right">
+        <tr><th>ASPECT</th>
+            <th>Compiler Design</th>
+            <th>Cryptography and Network Security</th>
+            <th>Internet of Things</th>
+            <th>Object Oriented Analysis and Design</th>
+            <th>Machine learning</th>
+        </tr>
+        <tr><td><p>1) communication</p></td>
+            
+             <td>
+               
+                    <input type="radio" id="star5" name="cd-com" value="5" />
+                
+                <input type="radio" id="star4" name="cd-com" value="4" />
+                
+                <input type="radio" id="star3" name="cd-com" value="3" />
+                
+                <input type="radio" id="star2" name="cd-com" value="2" />
+               
+                <input type="radio" id="star1" name="cd-com" value="1" />
+                
+                
+            </td>
+            <td>
+                
+                <input type="radio" id="star5" name="cns-com" value="5" />
+                
+                <input type="radio" id="star4" name="cns-com" value="4" />
+                
+                <input type="radio" id="star3" name="cns-com" value="3" />
+                
+                <input type="radio" id="star2" name="cns-com" value="2" />
+               
+                <input type="radio" id="star1" name="cns-com" value="1" />
+                
+                
+            </td>
+            <td>
+                
+                    <input type="radio" id="star5" name="iot-com" value="5" />
+                    
+                    <input type="radio" id="star4" name="iot-com" value="4" />
+                    
+                    <input type="radio" id="star3" name="iot-com" value="3" />
+                    
+                    <input type="radio" id="star2" name="iot-com" value="2" />
+                   
+                    <input type="radio" id="star1" name="iot-com" value="1" />
+                    
+                
+            </td>
+            <td>
+                
+                    <input type="radio" id="star5" name="ooad-com" value="5" />
+                    
+                    <input type="radio" id="star4" name="ooad-com" value="4" />
+                    
+                    <input type="radio" id="star3" name="ooad-com" value="3" />
+                    
+                    <input type="radio" id="star2" name="ooad-com" value="2" />
+                   
+                    <input type="radio" id="star1" name="ooad-com" value="1" />
+                    
+                  
+            </td>
+            <td>
+                
+                    <input type="radio" id="star5" name="ml-com" value="5" />
+                    
+                    <input type="radio" id="star4" name="ml-com" value="4" />
+                    
+                    <input type="radio" id="star3" name="ml-com" value="3" />
+                    
+                    <input type="radio" id="star2" name="ml-com" value="2" />
+                   
+                    <input type="radio" id="star1" name="ml-com" value="1" />
+                    
+                    
+            </td>
+        </tr>
+        <tr><td><p>2) Knowledge in Subject</p></td>
+            
+            <td>
+           
+               <input type="radio" id="star5" name="cd-know" value="5" />
+               
+               <input type="radio" id="star4" name="cd-know" value="4" />
+               
+               <input type="radio" id="star3" name="cd-know" value="3" />
+               
+               <input type="radio" id="star2" name="cd-know" value="2" />
+              
+               <input type="radio" id="star1" name="cd-know" value="1" />
+               
+            
+           </td>
+           <td>
+             
+               <input type="radio" id="star5" name="cns-know" value="5" />
+               
+               <input type="radio" id="star4" name="cns-know" value="4" />
+               
+               <input type="radio" id="star3" name="cns-know" value="3" />
+               
+               <input type="radio" id="star2" name="cns-know" value="2" />
+              
+               <input type="radio" id="star1" name="cns-know" value="1" />
+               
+               
+           </td>
+           <td>
+          
+                   <input type="radio" id="star5" name="iot-know" value="5" />
+                   
+                   <input type="radio" id="star4" name="iot-know" value="4" />
+                   
+                   <input type="radio" id="star3" name="iot-know" value="3" />
+                   
+                   <input type="radio" id="star2" name="iot-know" value="2" />
+                  
+                   <input type="radio" id="star1" name="iot-know" value="1" />
+                   
+             
+           </td>
+           <td>
+              
+                   <input type="radio" id="star5" name="ooad-know" value="5" />
+                   
+                   <input type="radio" id="star4" name="ooad-know" value="4" />
+                   
+                   <input type="radio" id="star3" name="ooad-know" value="3" />
+                   
+                   <input type="radio" id="star2" name="ooad-know" value="2" />
+                  
+                   <input type="radio" id="star1" name="ooad-know" value="1" />
+                   
+                
+           </td>
+           <td>
+              
+                   <input type="radio" id="star5" name="ml-know" value="5" />
+                   
+                   <input type="radio" id="star4" name="ml-know" value="4" />
+                   
+                   <input type="radio" id="star3" name="ml-know" value="3" />
+                   
+                   <input type="radio" id="star2" name="ml-know" value="2" />
+                  
+                   <input type="radio" id="star1" name="ml-know" value="1" />
+                   
+                   
+           </td>
+       </tr>
+        <tr><td><p>3) Usage of Board</p></td>
+            
+            <td>
+              
+               <input type="radio" id="star5" name="cd-Board" value="5" />
+               
+               <input type="radio" id="star4" name="cd-Board" value="4" />
+               
+               <input type="radio" id="star3" name="cd-Board" value="3" />
+               
+               <input type="radio" id="star2" name="cd-Board" value="2" />
+              
+               <input type="radio" id="star1" name="cd-Board" value="1" />
+               
+             
+           </td>
+           <td>
+             
+               <input type="radio" id="star5" name="cns-Board" value="5" />
+               
+               <input type="radio" id="star4" name="cns-Board" value="4" />
+               
+               <input type="radio" id="star3" name="cns-Board" value="3" />
+               
+               <input type="radio" id="star2" name="cns-Board" value="2" />
+              
+               <input type="radio" id="star1" name="cns-Board" value="1" />
+               
+          
+           </td>
+           <td>
+              
+                   <input type="radio" id="star5" name="iot-Board" value="5" />
+                   
+                   <input type="radio" id="star4" name="iot-Board" value="4" />
+                   
+                   <input type="radio" id="star3" name="iot-Board" value="3" />
+                   
+                   <input type="radio" id="star2" name="iot-Board" value="2" />
+                  
+                   <input type="radio" id="star1" name="iot-Board" value="1" />
+                   
+               
+           </td>
+           <td>
+               
+                   <input type="radio" id="star5" name="ooad-Board" value="5" />
+                   
+                   <input type="radio" id="star4" name="ooad-Board" value="4" />
+                   
+                   <input type="radio" id="star3" name="ooad-Board" value="3" />
+                   
+                   <input type="radio" id="star2" name="ooad-Board" value="2" />
+                  
+                   <input type="radio" id="star1" name="ooad-Board" value="1" />
+                   
+                   
+           </td>
+           <td>
+               
+                   <input type="radio" id="star5" name="ml-Board" value="5" />
+                   
+                   <input type="radio" id="star4" name="ml-Board" value="4" />
+                   
+                   <input type="radio" id="star3" name="ml-Board" value="3" />
+                   
+                   <input type="radio" id="star2" name="ml-Board" value="2" />
+                  
+                   <input type="radio" id="star1" name="ml-Board" value="1" />
+                   
+                 
+           </td>
+       </tr>
+       <tr><td><p>4) Usage of Technology</p></td>
+            
+        <td>
+        
+           <input type="radio" id="star5" name="cd-tech" value="5" />
+           
+           <input type="radio" id="star4" name="cd-tech" value="4" />
+           
+           <input type="radio" id="star3" name="cd-tech" value="3" />
+           
+           <input type="radio" id="star2" name="cd-tech" value="2" />
+          
+           <input type="radio" id="star1" name="cd-tech" value="1" />
+           
+          
+       </td>
+       <td>
+           
+           <input type="radio" id="star5" name="cns-tech" value="5" />
+           
+           <input type="radio" id="star4" name="cns-tech" value="4" />
+           
+           <input type="radio" id="star3" name="cns-tech" value="3" />
+           
+           <input type="radio" id="star2" name="cns-tech" value="2" />
+          
+           <input type="radio" id="star1" name="cns-tech" value="1" />
+           
+          
+       </td>
+       <td>
+           
+               <input type="radio" id="star5" name="iot-tech" value="5" />
+               
+               <input type="radio" id="star4" name="iot-tech" value="4" />
+               
+               <input type="radio" id="star3" name="iot-tech" value="3" />
+               
+               <input type="radio" id="star2" name="iot-tech" value="2" />
+              
+               <input type="radio" id="star1" name="iot-tech" value="1" />
+               
+           
+       </td>
+       <td>
+          
+               <input type="radio" id="star5" name="ooad-tech" value="5" />
+               
+               <input type="radio" id="star4" name="ooad-tech" value="4" />
+               
+               <input type="radio" id="star3" name="ooad-tech" value="3" />
+               
+               <input type="radio" id="star2" name="ooad-tech" value="2" />
+              
+               <input type="radio" id="star1" name="ooad-tech" value="1" />
+               
+           
+       </td>
+       <td>
+           
+               <input type="radio" id="star5" name="ml-tech" value="5" />
+               
+               <input type="radio" id="star4" name="ml-tech" value="4" />
+               
+               <input type="radio" id="star3" name="ml-tech" value="3" />
+               
+               <input type="radio" id="star2" name="ml-tech" value="2" />
+              
+               <input type="radio" id="star1" name="ml-tech" value="1" />
+               
+             
+       </td>
+   </tr>
+   <tr><td><p>5) Punctuality</p></td>
+            
+    <td>
+    
+       <input type="radio" id="star5" name="cd-pun" value="5" />
+       
+       <input type="radio" id="star4" name="cd-pun" value="4" />
+       
+       <input type="radio" id="star3" name="cd-pun" value="3" />
+       
+       <input type="radio" id="star2" name="cd-pun" value="2" />
+      
+       <input type="radio" id="star1" name="cd-pun" value="1" />
+       
+    
+   </td>
+   <td>
+     
+       <input type="radio" id="star5" name="cns-pun" value="5" />
+       
+       <input type="radio" id="star4" name="cns-pun" value="4" />
+       
+       <input type="radio" id="star3" name="cns-pun" value="3" />
+       
+       <input type="radio" id="star2" name="cns-pun" value="2" />
+      
+       <input type="radio" id="star1" name="cns-pun" value="1" />
+       
+    
+   </td>
+   <td>
+      
+           <input type="radio" id="star5" name="iot-pun" value="5" />
+           
+           <input type="radio" id="star4" name="iot-pun" value="4" />
+           
+           <input type="radio" id="star3" name="iot-pun" value="3" />
+           
+           <input type="radio" id="star2" name="iot-pun" value="2" />
+          
+           <input type="radio" id="star1" name="iot-pun" value="1" />
+           
+      
+   </td>
+   <td>
+      
+           <input type="radio" id="star5" name="ooad-pun" value="5" />
+           
+           <input type="radio" id="star4" name="ooad-pun" value="4" />
+           
+           <input type="radio" id="star3" name="ooad-pun" value="3" />
+           
+           <input type="radio" id="star2" name="ooad-pun" value="2" />
+          
+           <input type="radio" id="star1" name="ooad-pun" value="1" />
+           
+        
+   </td>
+   <td>
+    
+           <input type="radio" id="star5" name="ml-pun" value="5" />
+           
+           <input type="radio" id="star4" name="ml-pun" value="4" />
+           
+           <input type="radio" id="star3" name="ml-pun" value="3" />
+           
+           <input type="radio" id="star2" name="ml-pun" value="2" />
+          
+           <input type="radio" id="star1" name="ml-pun" value="1" />
+           
+           
+   </td>
+</tr>
+<tr><td><p>6) Time Manegement</p></td>
+            
+    <td>
+
+       <input type="radio" id="star5" name="cd-tm" value="5" />
+       
+       <input type="radio" id="star4" name="cd-tm" value="4" />
+       
+       <input type="radio" id="star3" name="cd-tm" value="3" />
+       
+       <input type="radio" id="star2" name="cd-tm" value="2" />
+      
+       <input type="radio" id="star1" name="cd-tm" value="1" />
+       
+   
+   </td>
+   <td>
+      
+       <input type="radio" id="star5" name="cns-tm" value="5" />
+       
+       <input type="radio" id="star4" name="cns-tm" value="4" />
+       
+       <input type="radio" id="star3" name="cns-tm" value="3" />
+       
+       <input type="radio" id="star2" name="cns-tm" value="2" />
+      
+       <input type="radio" id="star1" name="cns-tm" value="1" />
+       
+   
+   </td>
+   <td>
+      
+           <input type="radio" id="star5" name="iot-tm" value="5" />
+           
+           <input type="radio" id="star4" name="iot-tm" value="4" />
+           
+           <input type="radio" id="star3" name="iot-tm" value="3" />
+           
+           <input type="radio" id="star2" name="iot-tm" value="2" />
+          
+           <input type="radio" id="star1" name="iot-tm" value="1" />
+           
+ 
+   </td>
+   <td>
+  
+           <input type="radio" id="star5" name="ooad-tm" value="5" />
+           
+           <input type="radio" id="star4" name="ooad-tm" value="4" />
+           
+           <input type="radio" id="star3" name="ooad-tm" value="3" />
+           
+           <input type="radio" id="star2" name="ooad-tm" value="2" />
+          
+           <input type="radio" id="star1" name="ooad-tm" value="1" />
+           
+         
+   </td>
+   <td>
+      
+           <input type="radio" id="star5" name="ml-tm" value="5" />
+           
+           <input type="radio" id="star4" name="ml-tm" value="4" />
+           
+           <input type="radio" id="star3" name="ml-tm" value="3" />
+           
+           <input type="radio" id="star2" name="ml-tm" value="2" />
+          
+           <input type="radio" id="star1" name="ml-tm" value="1" />
+           
+           
+   </td>
+</tr>
+<tr><td><p>7) Practical Examples </p></td>
+            
+    <td>
+       
+       <input type="radio" id="star5" name="cd-pe" value="5" />
+       
+       <input type="radio" id="star4" name="cd-pe" value="4" />
+       
+       <input type="radio" id="star3" name="cd-pe" value="3" />
+       
+       <input type="radio" id="star2" name="cd-pe" value="2" />
+      
+       <input type="radio" id="star1" name="cd-pe" value="1" />
+       
+
+   </td>
+   <td>
+  
+       <input type="radio" id="star5" name="cns-pe" value="5" />
+       
+       <input type="radio" id="star4" name="cns-pe" value="4" />
+       
+       <input type="radio" id="star3" name="cns-pe" value="3" />
+       
+       <input type="radio" id="star2" name="cns-pe" value="2" />
+      
+       <input type="radio" id="star1" name="cns-pe" value="1" />
+       
+      
+   </td>
+   <td>
+      
+           <input type="radio" id="star5" name="iot-pe" value="5" />
+           
+           <input type="radio" id="star4" name="iot-pe" value="4" />
+           
+           <input type="radio" id="star3" name="iot-pe" value="3" />
+           
+           <input type="radio" id="star2" name="iot-pe" value="2" />
+          
+           <input type="radio" id="star1" name="iot-pe" value="1" />
+           
+
+   </td>
+   <td>
+      
+           <input type="radio" id="star5" name="ooad-pe" value="5" />
+           
+           <input type="radio" id="star4" name="ooad-pe" value="4" />
+           
+           <input type="radio" id="star3" name="ooad-pe" value="3" />
+           
+           <input type="radio" id="star2" name="ooad-pe" value="2" />
+          
+           <input type="radio" id="star1" name="ooad-pe" value="1" />
+           
+      
+   </td>
+   <td>
+     
+           <input type="radio" id="star5" name="ml-pe" value="5" />
+           
+           <input type="radio" id="star4" name="ml-pe" value="4" />
+           
+           <input type="radio" id="star3" name="ml-pe" value="3" />
+           
+           <input type="radio" id="star2" name="ml-pe" value="2" />
+          
+           <input type="radio" id="star1" name="ml-pe" value="1" />
+           
+      
+   </td>
+</tr>
+<tr><td><p>8) Over All</p></td>
+            
+    <td>
+      
+       <input type="radio" id="star5" name="cd-oa" value="5" />
+       
+       <input type="radio" id="star4" name="cd-oa" value="4" />
+       
+       <input type="radio" id="star3" name="cd-oa" value="3" />
+       
+       <input type="radio" id="star2" name="cd-oa" value="2" />
+      
+       <input type="radio" id="star1" name="cd-oa" value="1" />
+       
+      
+   </td>
+   <td>
+
+       <input type="radio" id="star5" name="cns-oa" value="5" />
+       
+       <input type="radio" id="star4" name="cns-oa" value="4" />
+       
+       <input type="radio" id="star3" name="cns-oa" value="3" />
+       
+       <input type="radio" id="star2" name="cns-oa" value="2" />
+      
+       <input type="radio" id="star1" name="cns-oa" value="1" />
+       
+      
+   </td>
+   <td>
+      
+           <input type="radio" id="star5" name="iot-oa" value="5" />
+           
+           <input type="radio" id="star4" name="iot-oa" value="4" />
+           
+           <input type="radio" id="star3" name="iot-oa" value="3" />
+           
+           <input type="radio" id="star2" name="iot-oa" value="2" />
+          
+           <input type="radio" id="star1" name="iot-oa" value="1" />
+           
+           
+   <td>
+       
+           <input type="radio" id="star5" name="ooad-oa" value="5" />
+           
+           <input type="radio" id="star4" name="ooad-oa" value="4" />
+           
+           <input type="radio" id="star3" name="ooad-oa" value="3" />
+           
+           <input type="radio" id="star2" name="ooad-oa" value="2" />
+          
+           <input type="radio" id="star1" name="ooad-oa" value="1" />
+           
+        
+   </td>
+   <td>
+      
+           <input type="radio" id="star5" name="ml-oa" value="5" />
+           
+           <input type="radio" id="star4" name="ml-oa" value="4" />
+           
+           <input type="radio" id="star3" name="ml-oa" value="3" />
+           
+           <input type="radio" id="star2" name="ml-oa" value="2" />
+          
+           <input type="radio" id="star1" name="ml-oa" value="1" />
+           
+         
+   </td>
+</tr>
+    </table>
+    <button type="submit" class="slide-button">SUBMIT</button>
+  </form>
+</center>
+</body>
+
+</html>
