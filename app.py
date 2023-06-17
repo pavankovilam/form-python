@@ -48,7 +48,7 @@ def forgotPassword():
             msg= otp 
             s = smtplib.SMTP('smtp.gmail.com', 587)
             s.starttls()
-            s.login("kovi.pavan.kumar@gmail.com", "tlvurhteqfowztsj")
+            s.login("kovi.pavan.kumar@gmail.com", "xxxxxxxxxxxxxxxx") #16 digit app passcode
             user="kovi.pavan.kumar@gmail.com"
             s.sendmail(user,emailid,msg)
             s.quit()
